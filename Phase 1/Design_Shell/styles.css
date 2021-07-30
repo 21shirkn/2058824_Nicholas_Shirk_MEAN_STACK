@@ -1,0 +1,21 @@
+body{font-family: 'Times New Roman', Times, serif;
+background-color: aqua;}
+ h1{
+     font-family: 'Times New Roman', Times, serif;
+     text-align: center;
+    }
+h1 span{
+    background-color:greenyellow;
+    
+}
+h2{text-align:center;
+    text-decoration: underline;}
+p{
+    text-align: center;
+    border: 5px solid red;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+div{color: brown; border: 1px dotted blue;}
