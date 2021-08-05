@@ -1,0 +1,59 @@
+
+#blogs{
+    margin:auto;
+    align-self: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#blogArt{
+    background-color:wheat;
+    width:200px;
+    text-align: center;
+    margin: auto;
+}
+#artTitle{
+    text-align: center;
+    margin: auto;
+    background-color: thistle;
+    margin-top: 10px;
+    margin-bottom:10px;
+
+}
+.image{
+    border: saddlebrown;
+    border-width: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+   text-align: left; 
+   background-color: salmon;
+}
+body{
+    background-color: sandybrown;
+}
+label{
+    display: inline-block;
+    width:100px;
+    text-align: right;
+}
+#inputs{
+    text-align:center; 
+    background-color: seagreen;
+    width:300px;
+    margin:auto;
+}
+#col{
+    background-color: teal;
+    outline: 5px solid ;
+    
+}
+#info{
+    text-align: center;
+}
+
+
+
+
+
