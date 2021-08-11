@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart</title>
+    <script src = "shoppingCart.js"></script>
+    <link rel="stylesheet" href="shoppingCart.css">
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id= "header">
+        <label id = "cartSize">Cart Total    $</label>
+        <label id = totalValue>0</label>
+
+        <a href="checkout.html"><button class = "link" id="checkout" action = "checkout.html">Checkout</button></a>
+    </div>
+</br>
+    <div id = "boxes" class = "box">
+        <div id = "db1" class= "childBox">
+            <label class= "name"> Burger</label>
+            <label class="price">Price $10</label>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60>" alt="Italian Trulli">
+            <input type = "button" id = "add1" value = "Add" class = "addButton" onClick = "add('Burger', 10)">
+            
+        </div>
+        <div id = "db2" class= "childBox">
+            <label class= "name"> Pasta</label>
+            <label class="price">Price $15</label>
+            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80>" alt="Italian Trulli">
+            <input type = "button" value = "Add" class = "addButton" onClick = "add('Pasta', 15)">
+            
+        </div>
+        <div id = "db2" class= "childBox">
+            <label class= "name"> Pizza</label>
+            <label class="price">Price $20</label>
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60>" alt="Italian Trulli">
+            <input type = "button" value = "Add" class = "addButton" onClick = "add('Pizza', 20)">
+            
+        </div>
+        <div id = "db2" class= "childBox">
+            <label class= "name">Hotdog</label>
+            <label class="price">Price $5</label>
+            <img src="https://images.unsplash.com/photo-1541214113241-21578d2d9b62?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60>" alt="Italian Trulli">
+            <input type = "button" value = "Add" class = "addButton" onClick = "add('Hotdog', 5)">
+            
+        </div>
+
+    </div>
+        
+    
+</body>
+</html>
