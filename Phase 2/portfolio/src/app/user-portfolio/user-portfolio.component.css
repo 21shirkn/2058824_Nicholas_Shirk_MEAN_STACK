@@ -1,0 +1,11 @@
+table{
+    border:black solid 1px;
+}
+#thName{
+    border-right: black solid 1px;
+    border-bottom: black solid 3px;
+}
+#thNumber{
+    border-left: black solid 1px;
+    border-bottom: black solid 3px;
+}

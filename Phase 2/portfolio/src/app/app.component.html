@@ -1,0 +1,25 @@
+<body>
+<div class = "main-div" style= "background-color: aqua;">
+  <h1 style="text-align: center;">Easy Portfolio</h1>
+</div>
+<div class = "main-div" style = "background-color: bisque; width:fit-content">
+
+
+  <app-login
+  *ngIf = "loginForm"
+  (registerFormChange)="formChange($event)">
+</app-login>
+
+
+  <app-signup 
+  *ngIf="registerForm">
+  </app-signup>
+
+
+  <app-user-portfolio 
+  *ngIf = false>
+</app-user-portfolio>
+
+
+</div>
+</body>
