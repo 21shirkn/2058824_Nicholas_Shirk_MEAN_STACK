@@ -7,17 +7,22 @@
 
   <app-login
   *ngIf = "loginForm"
-  (registerFormChange)="formChange($event)">
+  (registerFormChange)="formChange($event)"
+  (toPortfolio) = "loginToPort($event)"
+  (currentUser)="setCurrentUser($event)">
+
 </app-login>
 
 
   <app-signup 
+  (backToLogin) = "toLogin($event)"
   *ngIf="registerForm">
   </app-signup>
 
 
   <app-user-portfolio 
-  *ngIf = false>
+  *ngIf = "togglePortfolio"
+  [currentUser]="currentUser">
 </app-user-portfolio>
 
 

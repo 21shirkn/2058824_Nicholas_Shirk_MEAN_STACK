@@ -4,20 +4,25 @@
 
 </div>
 <div>
-    Welcome {{username}} <br>
+    Welcome {{currentUser}} <br>
     <br>
     <br>
-    Contact Name: <input type= "text"><br>
-    Phone No.: <input type = "text"><br>
+    Contact Name: <input type= "text" [(ngModel)] = "conName"><br>
+    Phone No.: <input type = "text" [(ngModel)] = "conNumber"><br>
     <button (click) = "saveData()">Save</button>
 </div> 
 <div>
     <label>Contact Details</label>
     <table>
-        <tr>
-        <th id = "thName">Name</th>
-        <th id = "thNumber">Number</th>
+        <thead>
+            <tr>
+            <th id = "thName">Name</th>
+            <th id = "thNumber">Number</th>
+            </tr>
+        </thead>
+        <tr *ngFor = "let p of userContacts">
+            <td>{{p[0]}}</td>
+            <td>{{p[1]}}</td>
         </tr>
-
     </table>
 </div>

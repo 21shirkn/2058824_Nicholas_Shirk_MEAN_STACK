@@ -5,10 +5,10 @@
 <div>   
     <button (click)="returnToLogin()" style= "margin-left: 13pc ;">Login</button><br>
     <div id = "inputBoxes">
-    First Name: <input type = "text"><br>
-    Last Name: <input type = "text"><br>
-    Username: <input type = "text"><br>
-    Password: <input type = "text"><br>
+    First Name: <input type = "text" [(ngModel)] = "Fname"><br>
+    Last Name: <input type = "text" [(ngModel)] = "Lname"><br>
+    Username: <input type = "text" [(ngModel)] = "userName"><br>
+    Password: <input type = "text" [(ngModel)] = "password"><br>
     </div>
     <button (click) = "saveData()" class = "bootomButtons" style = "left: 25%; position: relative;">Register</button>
     <button (click) = "restData()" class = "bootomButtons"style = "left: 50%; position: relative;">Reset</button>

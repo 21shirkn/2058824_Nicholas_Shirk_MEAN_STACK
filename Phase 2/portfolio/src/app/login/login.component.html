@@ -2,9 +2,11 @@
     <h2 style = "text-align: center;"><u>Login Form</u></h2>
 </div>
 <div>
-    Username: <input type= "text">
+    Username: <input type= "text" [(ngModel)]="logName">
     <br>
-    Password: <input type= "text">
+    Password: <input type= "text" [(ngModel)]="logPass">
+    <br>
+    <label >{{logMess}}</label>
     <br>
     <input (click) = "loginAttempt()" type="button" value="Login" style="margin-left: auto;margin-right: auto;">
     <input (click) = "goToRegisterForm()" type="button" value="Register" style="margin-left: auto;margin-right: auto;">
