@@ -1,0 +1,6 @@
+<form class = "app-class">
+  <mat-label>Task Tracker</mat-label>
+  <app-add-task
+  (updateTable) = "applist.updateTable()"></app-add-task>
+  <app-list #applist></app-list>
+</form>

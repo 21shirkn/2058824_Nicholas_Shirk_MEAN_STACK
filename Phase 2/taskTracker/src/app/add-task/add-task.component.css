@@ -1,0 +1,21 @@
+.att-task-class{
+    
+    margin-top: 4pc;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 20px;
+
+
+}
+.button{
+    background-color: #e99bb5;
+    border: black solid 1px;
+}
+.full-width{
+    width:100%
+
+}
+td{
+    padding-right: 8px;
+}
