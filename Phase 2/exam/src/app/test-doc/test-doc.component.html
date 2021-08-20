@@ -14,8 +14,7 @@
     <h2>Angular Exam</h2>
     <form #exam = "ngForm" [formGroup] = "myForm" (ngSubmit) = "onSubmit()">
         <div *ngFor = "let q of questions">
-            <p>{{q.qNum}}. +
-                0 {{q.question}}</p>
+            <p>{{q.qNum}}. {{q.question}}</p>
             <input type = "radio" value = "{{q.A1}}" formControlName = {{q.question}} ngModel>{{q.A1}}
             <input type = "radio" value = "{{q.A2}}" formControlName = {{q.question}} ngModel>{{q.A2}}
             <input type = "radio" value = "{{q.A3}}" formControlName = {{q.question}} ngModel>{{q.A3}}
