@@ -19,6 +19,7 @@ export class AddTaskComponent implements OnInit {
     task : new FormControl(''),
     deadline: new FormControl('')
   });
+   
 
 
 
