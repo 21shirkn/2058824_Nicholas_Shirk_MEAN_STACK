@@ -37,7 +37,7 @@ export class TestDocComponent implements OnInit {
     this.dataservice.getQuest().subscribe((data: Quest[]) =>{
       this.questions = data;
       this.questions.forEach(q=> {
-        this.myForm?.addControl(q.question, this.form.control(""));
+        this.myForm?.addControl(q.qNum, this.form.control(""));
       })
       
       
@@ -50,7 +50,22 @@ export class TestDocComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.myForm);
+    //console.log(this.myForm);
+    //console.log(this.myForm.value);
+    let total:number=0;
+    //console.log(this.questions[0].qNum)
+    for(let i = 0; i < 10; i ++){ 
+     console.log( this.questions[i].cA)
+     console.log(this.myForm.value);
+      if(this.myForm.value == this.questions[0].cA){
+        total++;
+         console.log(total);
+
+      }
+    }
+    //console.log(total);
+    
+    
 
 
   }
