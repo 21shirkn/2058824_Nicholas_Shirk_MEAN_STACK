@@ -52,22 +52,21 @@ export class TestDocComponent implements OnInit {
   onSubmit(){
     //console.log(this.myForm);
     //console.log(this.myForm.value);
-    let total:number=0;
-    //console.log(this.questions[0].qNum)
-    for(let i = 0; i < 10; i ++){ 
-     console.log( this.questions[i].cA)
-     console.log(this.myForm.value);
-      if(this.myForm.value == this.questions[0].cA){
-        total++;
-         console.log(total);
-
-      }
+    let answers:any = [];
+    let total:number= 0;
+    for(let i = 0; i < 11; i ++){
+      answers.push(this.myForm.value[i]);
     }
-    //console.log(total);
-    
-    
+    //console.log(String(answers[1]))
+    for(let i = 0; i < 10; i++){
+      if( String(answers[i+1])==this.questions[i].cA){
+        total++;
+        console.log(total);
+      }
 
 
-  }
+    }
 
-}
+  }//end onSubmit()
+
+}//end of class
