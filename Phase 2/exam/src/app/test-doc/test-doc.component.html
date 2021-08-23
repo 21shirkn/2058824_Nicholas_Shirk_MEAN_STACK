@@ -19,6 +19,9 @@
             <input type = "radio" value = "{{q.A2}}" formControlName = {{q.qNum}} ngModel>{{q.A2}}<br>
             <input type = "radio" value = "{{q.A3}}" formControlName = {{q.qNum}} ngModel>{{q.A3}}<br>
             <input type = "radio" value = "{{q.A4}}" formControlName = {{q.qNum}} ngModel>{{q.A4}}<br>
+            <br>
+            <br>
+            
         </div>
         <input type = "submit" value = "submit">
         <br>
@@ -27,5 +30,7 @@
         
 
     </form>
-    <h3 style="margin-left: 20px;">{{total}}/10 correct</h3>
+    <h3 style="margin-left: 20px;">{{total}}/10 correct</h3><br>
+    <h3>Incorrect Questions: {{wrong}}</h3>
+
 </div>

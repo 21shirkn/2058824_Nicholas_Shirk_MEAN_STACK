@@ -26,6 +26,7 @@ export class TestDocComponent implements OnInit {
   questions: Quest[];
   myForm:FormGroup;
   total:number;
+  wrong:number[];
 
  
   constructor(public form:FormBuilder, private dataservice: DataService, ) {
@@ -56,6 +57,7 @@ export class TestDocComponent implements OnInit {
     //console.log(this.myForm.value);
     let answers:any = [];
     this.total= 0;
+    this.wrong = [];
     for(let i = 0; i < 11; i ++){
       answers.push(this.myForm.value[i]);
     }
@@ -64,6 +66,9 @@ export class TestDocComponent implements OnInit {
       if( String(answers[i+1])==this.questions[i].cA){
         this.total++;
         console.log(this.total);
+      }else{
+        this.wrong.push(i + 1);
+
       }
 
 
