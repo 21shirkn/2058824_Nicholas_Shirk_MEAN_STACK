@@ -16,6 +16,7 @@ interface quest{
   cA:string
 }
 
+
 @Component({
   selector: 'app-test-doc',
   templateUrl: './test-doc.component.html',
@@ -24,6 +25,7 @@ interface quest{
 export class TestDocComponent implements OnInit {
   questions: Quest[];
   myForm:FormGroup;
+  total:number;
 
  
   constructor(public form:FormBuilder, private dataservice: DataService, ) {
@@ -53,15 +55,15 @@ export class TestDocComponent implements OnInit {
     //console.log(this.myForm);
     //console.log(this.myForm.value);
     let answers:any = [];
-    let total:number= 0;
+    this.total= 0;
     for(let i = 0; i < 11; i ++){
       answers.push(this.myForm.value[i]);
     }
     //console.log(String(answers[1]))
     for(let i = 0; i < 10; i++){
       if( String(answers[i+1])==this.questions[i].cA){
-        total++;
-        console.log(total);
+        this.total++;
+        console.log(this.total);
       }
 
 
