@@ -4,10 +4,10 @@ var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 var dateTime = date+' '+time;
 let user = {
-    Fname:r1.question("enter first name"),
-    Lname:r1.question("Enter Last name"),
-    gender: r1.question("enter gender"),
-    email: r1.question("enter email"),
+    Fname:r1.question("enter first name "),
+    Lname:r1.question("Enter Last name "),
+    gender: r1.question("enter gender "),
+    email: r1.question("enter email "),
     time:dateTime
     
 }
