@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinet</title>
+    <script src="/socket.io/socket.io.js"></script>
+
+</head>
+<body>
+    <h1>Chatting with Socket IO</h1>
+    <form id="sendContainer">
+        Message Box <br>
+        <input type = "text" id = "message-input">
+        <button type = "submit" id = "send-button">Send</button>
+    </form>
+    <hr>
+    <div id = serverMsg>
+        Server Message:
+    </div>
+    
+</body>
+<script type = "text/JavaScript">
+    var socket = io();
+    var messageForm = document.getElementById('sendContainer')
+    var sendBox= document.getElementById('message-input');
+    var today = new Date();
+    var time = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+ " "+today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    socket.emit("obj","Hello Server I am Web Socket Client");
+    socket.on("obj1",(msg)=> {
+        console.log(msg);
+    })
+    socket.on("obj3",(msg)=>{
+        console.log(msg);
+        let test =document.getElementById('serverMsg').innerHTML += "<h4 style = 'color:blue'>(" + time+  ") Server: " + msg + "</h4>"
+    })
+    messageForm.addEventListener('submit', e =>{
+        e.preventDefault()
+        let mess = sendBox.value;
+        socket.emit("obj2", mess);
+        sendBox.value = '';
+        let test =document.getElementById('serverMsg').innerHTML += "<h4>(" + time+  ") Client: " + mess + "</h4>"
+    })
+    
+
+    function sendMessage(){   
+        if(message.value){
+            socket.emit("obj",message.value);
+            socket.on("obj2",(msg)=>{
+                console.log(msg);
+            })
+        }
+        
+    }
+</script>
+</html>
