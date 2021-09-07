@@ -1,0 +1,7 @@
+create db: use Phase3DB_1
+
+create collection: db.createCollection("callRecords")
+
+inserte into collection db.callRecord.insertMany( COPY/PASTE DATA HERE)
+
+check its there: db.callRecord.find()
